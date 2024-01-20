@@ -6,7 +6,24 @@
     <title>Funker dette</title>
   </head>
   <body>
-    <p>Heisann</p>
-    <h1>Jeg kan forandre masse</h1>
+    <input type="button" class="random-number-btn" value="Vis tilfeldig tall" />
+    <p id="random-number-txt"></p>
+    <script>
+      const randomNumberBtn = document.querySelector(".random-number-btn");
+      const randomNumberTxt = document.querySelector("#random-number-txt");
+
+      randomNumberBtn.onclick = showRandomNumber;
+
+      function showRandomNumber() {
+        let randomNumber = Math.floor(Math.random() * 10);
+        randomNumberTxt.innerHTML = randomNumber;
+      }
+
+      function generateRandomNumber() {
+        let randomNumber = Math.floor(Math.random() * 10);
+
+        return randomNumber;
+      }
+    </script>
   </body>
 </html>
